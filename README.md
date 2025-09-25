@@ -1,0 +1,2 @@
+# -RFID-Based-Passport-Verification-System-using-8051-Microcontroller
+This project implements an RFID-based passport verification system that securely authenticates passport holders. The system uses an EM-18 RFID reader interfaced with an 8051 microcontroller to read passport details stored in RFID tags and compare them with stored records. The verification result is displayed on a 16×2 LCD screen.
