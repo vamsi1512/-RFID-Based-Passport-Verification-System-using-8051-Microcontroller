@@ -19,7 +19,7 @@ This project implements an RFID-based passport verification system that securely
 * Simulation in **Proteus** and hardware prototype tested
 * Can be extended to **access control, library management, toll collection, hospital patient management**, and more
 
-## 💻 Working
+## Working
 
 1. User swipes passport (RFID tag) on RFID reader
 2. 8051 receives data and processes it
