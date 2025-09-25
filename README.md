@@ -1,17 +1,17 @@
 # -RFID-Based-Passport-Verification-System-using-8051-Microcontroller
 This project implements an RFID-based passport verification system that securely authenticates passport holders. The system uses an EM-18 RFID reader interfaced with an 8051 microcontroller to read passport details stored in RFID tags and compare them with stored records. The verification result is displayed on a 16×2 LCD screen.
 
-✅ **Automation** – Eliminates manual passport verification
-✅ **Security** – Prevents forgery and unauthorized access
-✅ **Efficiency** – Provides real-time, reliable verification
+ **Automation** – Eliminates manual passport verification
+ **Security** – Prevents forgery and unauthorized access
+ **Efficiency** – Provides real-time, reliable verification
 
 
-## 🛠️ Components & Tools
+##  Components & Tools
 
 * **Hardware**: 8051 Microcontroller, EM-18 RFID Reader, RFID Tags, 16×2 LCD, Power Supply, Potentiometer, Jumper Wires
 * **Software**: Keil µVision (C/ASM programming), Proteus (simulation)
 
-## ⚡ Features
+##  Features
 
 * Reads and verifies RFID passport details
 * Compares received data with stored records
@@ -28,7 +28,7 @@ This project implements an RFID-based passport verification system that securely
 
 
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ├── Code/
@@ -40,14 +40,14 @@ This project implements an RFID-based passport verification system that securely
 │   └── Circuit diagram + setup images
 └── README.md
 ```
-## 🚀 Challenges Faced
+## Challenges Faced
 
 * RFID tag compatibility issues
 * Efficient microcontroller programming (interrupts, timers)
 * Data parsing and record matching
 * LCD integration and stable power supply
 
-## 📌 Applications
+## Applications
 
 * Passport & border security
 * Access control systems
@@ -58,7 +58,7 @@ This project implements an RFID-based passport verification system that securely
 
 ---
 
-## 🏆 Conclusion
+## Conclusion
 
 This project demonstrates the **integration of RFID with microcontroller-based verification** to provide a secure and efficient passport authentication system. It shows how embedded systems and RFID can be combined for **real-world security applications**.
 
