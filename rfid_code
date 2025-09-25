@@ -1,0 +1,142 @@
+; RFID-Based Passport Verification System using 8051
+; Assembly Program
+
+ORG 0000H          ; Start address
+SJMP 0030H         ; Jump to main program
+
+ORG 0030H          ; Main program starts
+
+; UART Initialization
+MOV TMOD, #20H     ; Timer1, Mode 2 (Auto-reload)
+MOV TH1, #0FDH     ; Baud rate 9600 for 11.0592 MHz
+MOV SCON, #50H     ; Serial mode 1, reception enabled
+SETB TR1           ; Start Timer1
+
+; LCD Initialization
+MOV A, #38H
+ACALL Command
+ACALL Delay
+MOV A, #0EH
+ACALL Command
+ACALL Delay
+MOV A, #01H
+ACALL Command
+ACALL Delay
+MOV A, #080H
+ACALL Command
+ACALL Delay
+
+MOV DPTR, #SIN
+ACALL String
+
+Again: 
+MOV R5, #12D
+MOV R0, #20H
+
+rfi:
+Monitor: JNB RI, Monitor   ; Wait until data received
+ACALL Serial
+INC R0
+DEC R5
+CJNE R5, #00H, rfi
+
+; Verification of received data
+MOV R0, #20H
+CJNE @R0, #"0", n0
+INC R0
+CJNE @R0, #"0", n0
+INC R0
+CJNE @R0, #"0", n0
+INC R0
+CJNE @R0, #"0", n0
+INC R0
+CJNE @R0, #"3", n3
+
+; Valid User Found
+MOV A, #080H
+ACALL Command
+ACALL Delay
+MOV DPTR, #St7
+ACALL String
+MOV A, #0C0H
+ACALL Command
+ACALL Delay
+MOV DPTR, #St8
+ACALL String
+JMP Again
+
+; Invalid User
+n3:
+MOV A, #080H
+ACALL Command
+ACALL Delay
+MOV DPTR, #StD
+ACALL String
+MOV A, #0C0H
+ACALL Command
+ACALL Delay
+MOV DPTR, #StE
+ACALL String
+JMP Again
+
+; ---------------- Subroutines ----------------
+
+Command:
+CLR P2.7
+CLR P2.6
+SETB P2.5
+MOV P0, A
+ACALL Delay
+CLR P2.5
+RET
+
+Datas:
+SETB P2.7
+CLR P2.6
+SETB P2.5
+MOV P0, A
+ACALL Delay
+CLR P2.5
+RET
+
+Delay:
+MOV R6, #0FFH
+Her1: MOV R7, #0AH
+Here: DJNZ R7, Here
+DJNZ R6, Her1
+RET
+
+String:
+L1: CLR A
+MOVC A, @A+DPTR
+JZ Finish
+ACALL Datas
+ACALL Delay
+INC DPTR
+SJMP L1
+Finish: RET
+
+Serial:
+CLR RI
+MOV A, SBUF
+MOV @R0, A
+RET
+
+; ---------------- Messages ----------------
+SIN:  DB ' Pls Swipe Card ',0
+St1:  DB 'Manikanta       ',0
+St2:  DB 'India           ',0
+St3:  DB 'Vamsi           ',0
+St4:  DB 'Germany         ',0
+St5:  DB 'Rahul           ',0
+St6:  DB 'Canada          ',0
+St7:  DB 'Satwik          ',0
+St8:  DB 'Japan           ',0
+St9:  DB 'Trivickram      ',0
+StA:  DB 'USA             ',0
+StB:  DB 'Seshank         ',0
+StC:  DB 'France          ',0
+StD:  DB '  Unidentified  ',0
+StE:  DB 'User Not Found..',0
+
+END
