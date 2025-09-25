@@ -1,0 +1,862 @@
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ff.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ff.a51 SET(SMALL) DEBUG PRINT(.\Listings\ff.lst) OBJECT(.\Objects\ff.ob
+                      j) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0x0000
+                       2     
+  0080                 3     IR1  equ P0.0
+  0081                 4     IR2  equ P0.1
+  0082                 5     IR3  equ P0.2
+  0083                 6     IR4  equ P0.3
+  0084                 7     IR5  equ P0.4
+  0085                 8     IR6  equ P0.5
+  0086                 9     IR7  equ P0.6
+  0087                10     IR8  equ P0.7
+                      11             
+  00A0                12     LED1 equ P2.0
+  00A1                13     LED2 equ P2.1
+  00A2                14     LED3 equ P2.2
+  00A3                15     LED4 equ P2.3
+  00A4                16     LED5 equ P2.4
+  00A5                17     LED6 equ P2.5
+  00A6                18     LED7 equ P2.6
+  00A7                19     LED8 equ P2.7
+                      20     
+  0030                21     counter1 equ 30h
+  0031                22     counter2 equ 31h
+  0032                23     counter3 equ 32h
+  0033                24     counter4 equ 33h
+  0034                25     counter5 equ 34h
+  0035                26     counter6 equ 35h
+  0036                27     counter7 equ 36h
+  0037                28     counter8 equ 37h
+                      29     
+0000                  30     SET_INPUT:
+0000 7580FF           31         MOV P0, #0xFF  ; Set PORT 0 as input
+0003 75A000           32         MOV P2, #0x00  ; Set PORT 2 as output
+0006 753000           33             MOV counter1, #0
+0009 753100           34             MOV counter2, #0
+000C 753200           35             MOV counter3, #0
+000F 753300           36             MOV counter4, #0
+0012 753400           37             MOV counter5, #0
+0015 753500           38             MOV counter6, #0
+0018 753600           39             MOV counter7, #0
+001B 753700           40             MOV counter8, #0
+                      41     
+001E                  42     START:
+                      43     
+001E 91E6             44     ACALL DELAY
+0020 91E6             45     ACALL DELAY
+0022 91E6             46     ACALL DELAY
+0024 91E6             47     ACALL DELAY
+0026 91E6             48     ACALL DELAY
+0028 91E6             49     ACALL DELAY
+002A 91E6             50     ACALL DELAY
+002C 91E6             51     ACALL DELAY
+002E 91E6             52     ACALL DELAY
+0030 91E6             53     ACALL DELAY
+0032 91E6             54     ACALL DELAY
+0034 91E6             55     ACALL DELAY
+0036 91E6             56     ACALL DELAY
+0038 91E6             57     ACALL DELAY
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE     2
+
+003A 91E6             58     ACALL DELAY
+003C 91E6             59     ACALL DELAY
+003E 91E6             60     ACALL DELAY
+0040 91E6             61     ACALL DELAY
+0042 91E6             62     ACALL DELAY
+0044 91E6             63     ACALL DELAY
+0046 91E6             64     ACALL DELAY
+0048 91E6             65     ACALL DELAY
+004A 91E6             66     ACALL DELAY
+004C 91E6             67     ACALL DELAY
+004E 91E6             68     ACALL DELAY
+0050 91E6             69     ACALL DELAY
+0052 91E6             70     ACALL DELAY
+0054 91E6             71     ACALL DELAY
+0056 91E6             72     ACALL DELAY
+0058 91E6             73     ACALL DELAY
+005A 91E6             74     ACALL DELAY
+005C 91E6             75     ACALL DELAY
+005E 91E6             76     ACALL DELAY
+0060 91E6             77     ACALL DELAY
+0062 91E6             78     ACALL DELAY
+0064 91E6             79     ACALL DELAY
+0066 91E6             80     ACALL DELAY
+0068 91E6             81     ACALL DELAY
+006A 91E6             82     ACALL DELAY
+006C 91E6             83     ACALL DELAY
+006E 91E6             84     ACALL DELAY
+0070 91E6             85     ACALL DELAY
+0072 91E6             86     ACALL DELAY
+0074 91E6             87     ACALL DELAY
+0076 91E6             88     ACALL DELAY
+0078 91E6             89     ACALL DELAY
+007A 91E6             90     ACALL DELAY
+007C 91E6             91     ACALL DELAY
+007E 91E6             92     ACALL DELAY
+0080 91E6             93     ACALL DELAY
+0082 91E6             94     ACALL DELAY
+0084 91E6             95     ACALL DELAY
+0086 91E6             96     ACALL DELAY
+0088 91E6             97     ACALL DELAY
+008A 91E6             98     ACALL DELAY
+008C 91E6             99     ACALL DELAY
+008E 91E6            100     ACALL DELAY
+0090 91E6            101     ACALL DELAY
+0092 91E6            102     ACALL DELAY
+0094 91E6            103     ACALL DELAY
+0096 91E6            104     ACALL DELAY
+0098 91E6            105     ACALL DELAY
+009A 91E6            106     ACALL DELAY
+009C 91E6            107     ACALL DELAY
+009E 91E6            108     ACALL DELAY
+00A0 91E6            109     ACALL DELAY
+00A2 91E6            110     ACALL DELAY
+00A4 91E6            111     ACALL DELAY
+00A6 91E6            112     ACALL DELAY
+00A8 91E6            113     ACALL DELAY
+00AA 91E6            114     ACALL DELAY
+00AC 91E6            115     ACALL DELAY
+00AE 91E6            116     ACALL DELAY
+00B0 91E6            117     ACALL DELAY
+00B2 91E6            118     ACALL DELAY
+00B4 91E6            119     ACALL DELAY
+00B6 91E6            120     ACALL DELAY
+00B8 91E6            121     ACALL DELAY
+00BA 91E6            122     ACALL DELAY
+00BC 91E6            123     ACALL DELAY
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE     3
+
+00BE 91E6            124     ACALL DELAY
+00C0 91E6            125     ACALL DELAY
+00C2 91E6            126     ACALL DELAY
+00C4 91E6            127     ACALL DELAY
+00C6 91E6            128     ACALL DELAY
+00C8 91E6            129     ACALL DELAY
+00CA 91E6            130     ACALL DELAY
+00CC 91E6            131     ACALL DELAY
+00CE 91E6            132     ACALL DELAY
+00D0 91E6            133     ACALL DELAY
+00D2 91E6            134     ACALL DELAY
+00D4 91E6            135     ACALL DELAY
+00D6 91E6            136     ACALL DELAY
+00D8 91E6            137     ACALL DELAY
+00DA 91E6            138     ACALL DELAY
+00DC 91E6            139     ACALL DELAY
+00DE 91E6            140     ACALL DELAY
+00E0 91E6            141     ACALL DELAY
+00E2 91E6            142     ACALL DELAY
+00E4 91E6            143     ACALL DELAY
+00E6 91E6            144     ACALL DELAY
+00E8 91E6            145     ACALL DELAY
+00EA 91E6            146     ACALL DELAY
+00EC 91E6            147     ACALL DELAY
+00EE 91E6            148     ACALL DELAY
+00F0 91E6            149     ACALL DELAY
+00F2 91E6            150     ACALL DELAY
+00F4 91E6            151     ACALL DELAY
+00F6 91E6            152     ACALL DELAY
+00F8 91E6            153     ACALL DELAY
+00FA 91E6            154     ACALL DELAY
+00FC 91E6            155     ACALL DELAY
+00FE 91E6            156     ACALL DELAY
+0100 91E6            157     ACALL DELAY
+0102 91E6            158     ACALL DELAY
+0104 91E6            159     ACALL DELAY
+0106 91E6            160     ACALL DELAY
+0108 91E6            161     ACALL DELAY
+010A 91E6            162     ACALL DELAY
+010C 91E6            163     ACALL DELAY
+010E 91E6            164     ACALL DELAY
+0110 91E6            165     ACALL DELAY
+0112 91E6            166     ACALL DELAY
+0114 91E6            167     ACALL DELAY
+0116 91E6            168     ACALL DELAY
+0118 91E6            169     ACALL DELAY
+011A 91E6            170     ACALL DELAY
+011C 91E6            171     ACALL DELAY
+011E 91E6            172     ACALL DELAY
+0120 91E6            173     ACALL DELAY
+0122 91E6            174     ACALL DELAY
+0124 91E6            175     ACALL DELAY
+0126 91E6            176     ACALL DELAY
+0128 91E6            177     ACALL DELAY
+012A 91E6            178     ACALL DELAY
+012C 91E6            179     ACALL DELAY
+012E 91E6            180     ACALL DELAY
+0130 91E6            181     ACALL DELAY
+0132 91E6            182     ACALL DELAY
+0134 91E6            183     ACALL DELAY
+0136 91E6            184     ACALL DELAY
+0138 91E6            185     ACALL DELAY
+013A 91E6            186     ACALL DELAY
+013C 91E6            187     ACALL DELAY
+013E 91E6            188     ACALL DELAY
+0140 91E6            189     ACALL DELAY
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE     4
+
+0142 91E6            190     ACALL DELAY
+0144 91E6            191     ACALL DELAY
+0146 91E6            192     ACALL DELAY
+0148 91E6            193     ACALL DELAY
+014A 91E6            194     ACALL DELAY
+014C 91E6            195     ACALL DELAY
+014E 91E6            196     ACALL DELAY
+0150 91E6            197     ACALL DELAY
+0152 91E6            198     ACALL DELAY
+0154 91E6            199     ACALL DELAY
+0156 91E6            200     ACALL DELAY
+0158 91E6            201     ACALL DELAY
+015A 91E6            202     ACALL DELAY
+015C 91E6            203     ACALL DELAY
+015E 91E6            204     ACALL DELAY
+0160 91E6            205     ACALL DELAY
+0162 91E6            206     ACALL DELAY
+0164 91E6            207     ACALL DELAY
+0166 91E6            208     ACALL DELAY
+0168 91E6            209     ACALL DELAY
+016A 91E6            210     ACALL DELAY
+016C 91E6            211     ACALL DELAY
+016E 91E6            212     ACALL DELAY
+0170 91E6            213     ACALL DELAY
+0172 91E6            214     ACALL DELAY
+0174 91E6            215     ACALL DELAY
+0176 91E6            216     ACALL DELAY
+0178 91E6            217     ACALL DELAY
+017A 91E6            218     ACALL DELAY
+017C 91E6            219     ACALL DELAY
+017E 91E6            220     ACALL DELAY
+0180 91E6            221     ACALL DELAY
+0182 91E6            222     ACALL DELAY
+0184 91E6            223     ACALL DELAY
+0186 91E6            224     ACALL DELAY
+0188 91E6            225     ACALL DELAY
+018A 91E6            226     ACALL DELAY
+018C 91E6            227     ACALL DELAY
+018E 91E6            228     ACALL DELAY
+0190 91E6            229     ACALL DELAY
+0192 91E6            230     ACALL DELAY
+0194 91E6            231     ACALL DELAY
+0196 91E6            232     ACALL DELAY
+0198 91E6            233     ACALL DELAY
+019A 91E6            234     ACALL DELAY
+019C 91E6            235     ACALL DELAY
+019E 91E6            236     ACALL DELAY
+01A0 91E6            237     ACALL DELAY
+01A2 91E6            238     ACALL DELAY
+01A4 91E6            239     ACALL DELAY
+01A6 91E6            240     ACALL DELAY
+01A8 91E6            241     ACALL DELAY
+01AA 91E6            242     ACALL DELAY
+01AC 91E6            243     ACALL DELAY
+01AE 91E6            244     ACALL DELAY
+01B0 91E6            245     ACALL DELAY
+01B2 91E6            246     ACALL DELAY
+01B4 91E6            247     ACALL DELAY
+01B6 91E6            248     ACALL DELAY
+01B8 91E6            249     ACALL DELAY
+01BA 91E6            250     ACALL DELAY
+01BC 91E6            251     ACALL DELAY
+01BE 91E6            252     ACALL DELAY
+01C0 91E6            253     ACALL DELAY
+01C2 91E6            254     ACALL DELAY
+01C4 91E6            255     ACALL DELAY
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE     5
+
+01C6 91E6            256     ACALL DELAY
+01C8 91E6            257     ACALL DELAY
+01CA 91E6            258     ACALL DELAY
+01CC 91E6            259     ACALL DELAY
+01CE 91E6            260     ACALL DELAY
+01D0 91E6            261     ACALL DELAY
+01D2 91E6            262     ACALL DELAY
+01D4 91E6            263     ACALL DELAY
+01D6 91E6            264     ACALL DELAY
+01D8 91E6            265     ACALL DELAY
+01DA 91E6            266     ACALL DELAY
+01DC 91E6            267     ACALL DELAY
+01DE 91E6            268     ACALL DELAY
+01E0 91E6            269     ACALL DELAY
+01E2 91E6            270     ACALL DELAY
+01E4 91E6            271     ACALL DELAY
+01E6 91E6            272     ACALL DELAY
+01E8 91E6            273     ACALL DELAY
+01EA 91E6            274     ACALL DELAY
+01EC 91E6            275     ACALL DELAY
+01EE 91E6            276     ACALL DELAY
+01F0 91E6            277     ACALL DELAY
+01F2 91E6            278     ACALL DELAY
+01F4 91E6            279     ACALL DELAY
+01F6 91E6            280     ACALL DELAY
+01F8 91E6            281     ACALL DELAY
+01FA 91E6            282     ACALL DELAY
+01FC 91E6            283     ACALL DELAY
+01FE 91E6            284     ACALL DELAY
+0200 91E6            285     ACALL DELAY
+0202 91E6            286     ACALL DELAY
+0204 91E6            287     ACALL DELAY
+0206 91E6            288     ACALL DELAY
+0208 91E6            289     ACALL DELAY
+020A 91E6            290     ACALL DELAY
+020C 91E6            291     ACALL DELAY
+020E 91E6            292     ACALL DELAY
+0210 91E6            293     ACALL DELAY
+0212 91E6            294     ACALL DELAY
+0214 91E6            295     ACALL DELAY
+0216 91E6            296     ACALL DELAY
+0218 91E6            297     ACALL DELAY
+021A 91E6            298     ACALL DELAY
+021C 91E6            299     ACALL DELAY
+021E 91E6            300     ACALL DELAY
+0220 91E6            301     ACALL DELAY
+0222 91E6            302     ACALL DELAY
+0224 91E6            303     ACALL DELAY
+0226 91E6            304     ACALL DELAY
+0228 91E6            305     ACALL DELAY
+022A 91E6            306     ACALL DELAY
+022C 91E6            307     ACALL DELAY
+022E 91E6            308     ACALL DELAY
+0230 91E6            309     ACALL DELAY
+0232 91E6            310     ACALL DELAY
+0234 91E6            311     ACALL DELAY
+0236 91E6            312     ACALL DELAY
+0238 91E6            313     ACALL DELAY
+023A 91E6            314     ACALL DELAY
+023C 91E6            315     ACALL DELAY
+023E 91E6            316     ACALL DELAY
+0240 91E6            317     ACALL DELAY
+0242 91E6            318     ACALL DELAY
+0244 91E6            319     ACALL DELAY
+0246 91E6            320     ACALL DELAY
+0248 91E6            321     ACALL DELAY
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE     6
+
+024A 91E6            322     ACALL DELAY
+024C 91E6            323     ACALL DELAY
+024E 91E6            324     ACALL DELAY
+0250 91E6            325     ACALL DELAY
+0252 91E6            326     ACALL DELAY
+0254 91E6            327     ACALL DELAY
+0256 91E6            328     ACALL DELAY
+0258 91E6            329     ACALL DELAY
+025A 91E6            330     ACALL DELAY
+025C 91E6            331     ACALL DELAY
+025E 91E6            332     ACALL DELAY
+0260 91E6            333     ACALL DELAY
+0262 91E6            334     ACALL DELAY
+0264 91E6            335     ACALL DELAY
+0266 91E6            336     ACALL DELAY
+0268 91E6            337     ACALL DELAY
+026A 91E6            338     ACALL DELAY
+026C 91E6            339     ACALL DELAY
+026E 91E6            340     ACALL DELAY
+0270 91E6            341     ACALL DELAY
+0272 91E6            342     ACALL DELAY
+0274 91E6            343     ACALL DELAY
+0276 91E6            344     ACALL DELAY
+0278 91E6            345     ACALL DELAY
+027A 91E6            346     ACALL DELAY
+027C 91E6            347     ACALL DELAY
+027E 91E6            348     ACALL DELAY
+0280 91E6            349     ACALL DELAY
+0282 91E6            350     ACALL DELAY
+0284 91E6            351     ACALL DELAY
+0286 91E6            352     ACALL DELAY
+0288 91E6            353     ACALL DELAY
+028A 91E6            354     ACALL DELAY
+028C 91E6            355     ACALL DELAY
+028E 91E6            356     ACALL DELAY
+0290 91E6            357     ACALL DELAY
+0292 91E6            358     ACALL DELAY
+0294 91E6            359     ACALL DELAY
+0296 91E6            360     ACALL DELAY
+0298 91E6            361     ACALL DELAY
+029A 91E6            362     ACALL DELAY
+029C 91E6            363     ACALL DELAY
+029E 91E6            364     ACALL DELAY
+02A0 91E6            365     ACALL DELAY
+02A2 91E6            366     ACALL DELAY
+02A4 91E6            367     ACALL DELAY
+02A6 91E6            368     ACALL DELAY
+02A8 91E6            369     ACALL DELAY
+02AA 91E6            370     ACALL DELAY
+02AC 91E6            371     ACALL DELAY
+02AE 91E6            372     ACALL DELAY
+02B0 91E6            373     ACALL DELAY
+02B2 91E6            374     ACALL DELAY
+02B4 91E6            375     ACALL DELAY
+02B6 91E6            376     ACALL DELAY
+02B8 91E6            377     ACALL DELAY
+02BA 91E6            378     ACALL DELAY
+02BC 91E6            379     ACALL DELAY
+02BE 91E6            380     ACALL DELAY
+02C0 91E6            381     ACALL DELAY
+02C2 91E6            382     ACALL DELAY
+02C4 91E6            383     ACALL DELAY
+02C6 91E6            384     ACALL DELAY
+02C8 91E6            385     ACALL DELAY
+02CA 91E6            386     ACALL DELAY
+02CC 91E6            387     ACALL DELAY
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE     7
+
+02CE 91E6            388     ACALL DELAY
+02D0 91E6            389     ACALL DELAY
+02D2 91E6            390     ACALL DELAY
+02D4 91E6            391     ACALL DELAY
+02D6 91E6            392     ACALL DELAY
+02D8 91E6            393     ACALL DELAY
+02DA 91E6            394     ACALL DELAY
+02DC 91E6            395     ACALL DELAY
+02DE 91E6            396     ACALL DELAY
+02E0 91E6            397     ACALL DELAY
+02E2 91E6            398     ACALL DELAY
+02E4 91E6            399     ACALL DELAY
+02E6 91E6            400     ACALL DELAY
+02E8 91E6            401     ACALL DELAY
+02EA 91E6            402     ACALL DELAY
+02EC 91E6            403     ACALL DELAY
+02EE 91E6            404     ACALL DELAY
+02F0 91E6            405     ACALL DELAY
+02F2 91E6            406     ACALL DELAY
+02F4 91E6            407     ACALL DELAY
+02F6 91E6            408     ACALL DELAY
+02F8 91E6            409     ACALL DELAY
+02FA 91E6            410     ACALL DELAY
+02FC 91E6            411     ACALL DELAY
+02FE 91E6            412     ACALL DELAY
+0300 91E6            413     ACALL DELAY
+0302 91E6            414     ACALL DELAY
+0304 91E6            415     ACALL DELAY
+0306 91E6            416     ACALL DELAY
+0308 91E6            417     ACALL DELAY
+030A 91E6            418     ACALL DELAY
+030C 91E6            419     ACALL DELAY
+030E 91E6            420     ACALL DELAY
+0310 91E6            421     ACALL DELAY
+0312 91E6            422     ACALL DELAY
+0314 91E6            423     ACALL DELAY
+0316 91E6            424     ACALL DELAY
+0318 91E6            425     ACALL DELAY
+031A 91E6            426     ACALL DELAY
+031C 91E6            427     ACALL DELAY
+031E 91E6            428     ACALL DELAY
+0320 91E6            429     ACALL DELAY
+0322 91E6            430     ACALL DELAY
+0324 91E6            431     ACALL DELAY
+0326 91E6            432     ACALL DELAY
+0328 91E6            433     ACALL DELAY
+032A 91E6            434     ACALL DELAY
+032C 91E6            435     ACALL DELAY
+032E 91E6            436     ACALL DELAY
+0330 91E6            437     ACALL DELAY
+0332 91E6            438     ACALL DELAY
+0334 91E6            439     ACALL DELAY
+0336 91E6            440     ACALL DELAY
+0338 91E6            441     ACALL DELAY
+033A 91E6            442     ACALL DELAY
+033C 91E6            443     ACALL DELAY
+033E 91E6            444     ACALL DELAY
+0340 91E6            445     ACALL DELAY
+0342 91E6            446     ACALL DELAY
+0344 91E6            447     ACALL DELAY
+0346 91E6            448     ACALL DELAY
+0348 91E6            449     ACALL DELAY
+034A 91E6            450     ACALL DELAY
+034C 91E6            451     ACALL DELAY
+034E 91E6            452     ACALL DELAY
+0350 91E6            453     ACALL DELAY
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE     8
+
+0352 91E6            454     ACALL DELAY
+0354 91E6            455     ACALL DELAY
+0356 91E6            456     ACALL DELAY
+0358 91E6            457     ACALL DELAY
+035A 91E6            458     ACALL DELAY
+035C 91E6            459     ACALL DELAY
+035E 91E6            460     ACALL DELAY
+0360 91E6            461     ACALL DELAY
+0362 91E6            462     ACALL DELAY
+0364 91E6            463     ACALL DELAY
+0366 91E6            464     ACALL DELAY
+0368 91E6            465     ACALL DELAY
+036A 91E6            466     ACALL DELAY
+036C 91E6            467     ACALL DELAY
+036E 91E6            468     ACALL DELAY
+0370 91E6            469     ACALL DELAY
+0372 91E6            470     ACALL DELAY
+0374 91E6            471     ACALL DELAY
+0376 91E6            472     ACALL DELAY
+0378 91E6            473     ACALL DELAY
+037A 91E6            474     ACALL DELAY
+037C 91E6            475     ACALL DELAY
+037E 91E6            476     ACALL DELAY
+0380 91E6            477     ACALL DELAY
+0382 91E6            478     ACALL DELAY
+0384 91E6            479     ACALL DELAY
+0386 91E6            480     ACALL DELAY
+0388 91E6            481     ACALL DELAY
+038A 91E6            482     ACALL DELAY
+038C 91E6            483     ACALL DELAY
+038E 91E6            484     ACALL DELAY
+0390 91E6            485     ACALL DELAY
+0392 91E6            486     ACALL DELAY
+0394 91E6            487     ACALL DELAY
+0396 91E6            488     ACALL DELAY
+0398 91E6            489     ACALL DELAY
+039A 91E6            490     ACALL DELAY
+039C 91E6            491     ACALL DELAY
+039E 91E6            492     ACALL DELAY
+03A0 91E6            493     ACALL DELAY
+03A2 91E6            494     ACALL DELAY
+03A4 91E6            495     ACALL DELAY
+03A6 91E6            496     ACALL DELAY
+03A8 91E6            497     ACALL DELAY
+03AA 91E6            498     ACALL DELAY
+03AC 91E6            499     ACALL DELAY
+03AE 91E6            500     ACALL DELAY
+03B0 91E6            501     ACALL DELAY
+03B2 91E6            502     ACALL DELAY
+03B4 91E6            503     ACALL DELAY
+03B6 91E6            504     ACALL DELAY
+03B8 91E6            505     ACALL DELAY
+03BA 91E6            506     ACALL DELAY
+03BC 91E6            507     ACALL DELAY
+03BE 91E6            508     ACALL DELAY
+03C0 91E6            509     ACALL DELAY
+03C2 91E6            510     ACALL DELAY
+03C4 91E6            511     ACALL DELAY
+03C6 91E6            512     ACALL DELAY
+03C8 91E6            513     ACALL DELAY
+03CA 91E6            514     ACALL DELAY
+03CC 91E6            515     ACALL DELAY
+03CE 91E6            516     ACALL DELAY
+03D0 91E6            517     ACALL DELAY
+03D2 91E6            518     ACALL DELAY
+03D4 91E6            519     ACALL DELAY
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE     9
+
+03D6 91E6            520     ACALL DELAY
+03D8 91E6            521     ACALL DELAY
+03DA 91E6            522     ACALL DELAY
+03DC 91E6            523     ACALL DELAY
+03DE 308018          524         JNB IR1, IR1_PASSED
+03E1 308119          525         JNB IR2, IR2_PASSED
+03E4 30821A          526         JNB IR3, IR3_PASSED
+03E7 30831B          527         JNB IR4, IR4_PASSED
+03EA 30841C          528         JNB IR5, IR5_PASSED
+03ED 30851D          529         JNB IR6, IR6_PASSED
+03F0 30861E          530         JNB IR7, IR7_PASSED
+03F3 30871F          531         JNB IR8, IR8_PASSED
+                     532         
+03F6 02001E          533         lJMP START
+                     534     
+03F9                 535     IR1_PASSED:
+03F9 0530            536         INC counter1
+03FB 801A            537         SJMP IR_DONE
+                     538     
+03FD                 539     IR2_PASSED:
+03FD 0531            540         INC counter2
+03FF 8016            541         SJMP IR_DONE
+                     542     
+0401                 543     IR3_PASSED:
+0401 0532            544         INC counter3
+0403 8012            545         SJMP IR_DONE
+                     546     
+0405                 547     IR4_PASSED:
+0405 0533            548         INC counter4
+0407 800E            549         SJMP IR_DONE
+                     550     
+0409                 551     IR5_PASSED:
+0409 0534            552         INC counter5
+040B 800A            553         SJMP IR_DONE
+                     554     
+040D                 555     IR6_PASSED:
+040D 0535            556         INC counter6
+040F 8006            557         SJMP IR_DONE
+                     558     
+0411                 559     IR7_PASSED:
+0411 0536            560         INC counter7
+0413 8002            561         SJMP IR_DONE
+                     562     
+0415                 563     IR8_PASSED:
+0415 0537            564         INC counter8
+                     565     
+0417                 566     IR_DONE:
+0417 8000            567             SJMP CONTINUE_1_2
+                     568     
+0419                 569     CONTINUE_1_2:
+0419 8530F0          570         MOV B, counter1
+041C E531            571             MOV A,counter2
+041E B5F002          572         CJNE A,B,L1
+0421 8008            573             SJMP NO_VEHICLE_BETWEEN_1_2
+0423                 574         L1:
+0423 8000            575             SJMP VEHICLE_BETWEEN_1_2
+                     576         
+                     577     
+0425                 578     VEHICLE_BETWEEN_1_2:
+0425 D2A0            579         SETB LED1
+0427 D2A1            580         SETB LED2
+0429 8002            581         SJMP CONTINUE_2_3
+                     582     
+042B                 583     NO_VEHICLE_BETWEEN_1_2:
+042B C2A0            584         CLR LED1
+                     585     
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE    10
+
+042D                 586     CONTINUE_2_3:
+042D 8531F0          587         MOV B, counter2
+0430 E532            588             MOV A,counter3
+0432 B5F002          589         CJNE A,B,L2
+0435 8008            590             SJMP NO_VEHICLE_BETWEEN_2_3
+0437 8000            591         L2:SJMP VEHICLE_BETWEEN_2_3
+                     592             
+                     593     
+0439                 594     VEHICLE_BETWEEN_2_3:
+0439 D2A1            595         SETB LED2
+043B D2A2            596         SETB LED3
+043D 800E            597         SJMP CONTINUE_3_4
+                     598     
+043F                 599     NO_VEHICLE_BETWEEN_2_3:
+043F 8530F0          600             MOV B, counter1
+0442 E531            601             MOV A,counter2
+0444 B5F002          602         CJNE A,B,CB12
+0447 C2A0            603             CLR LED1
+                     604             
+0449                 605             CB12:
+0449 C2A1            606             CLR LED2
+044B 8000            607             SJMP CONTINUE_3_4
+                     608             
+                     609         
+                     610     
+044D                 611     CONTINUE_3_4:
+044D 8532F0          612         MOV B,counter3
+0450 E533            613             MOV A,counter4
+0452 B5F002          614         CJNE A,B,L3
+0455 8008            615             SJMP NO_VEHICLE_BETWEEN_3_4
+0457 8000            616         L3:SJMP VEHICLE_BETWEEN_3_4
+                     617             
+                     618     
+0459                 619     VEHICLE_BETWEEN_3_4:
+0459 D2A2            620         SETB LED3
+045B D2A3            621         SETB LED4
+045D 800C            622         SJMP CONTINUE_4_5
+                     623     
+045F                 624     NO_VEHICLE_BETWEEN_3_4:
+045F 8530F0          625         MOV B, counter1
+0462 E531            626             MOV A,counter2
+0464 B5F002          627         CJNE A,B,CB23
+0467 C2A1            628             CLR LED2
+0469                 629             CB23: 
+0469 C2A2            630             CLR LED3
+                     631     
+046B                 632     CONTINUE_4_5:
+046B 8533F0          633         MOV B,counter4
+046E E534            634             MOV A,counter5
+0470 B5F002          635         CJNE A,B,L4
+0473 8008            636             SJMP NO_VEHICLE_BETWEEN_4_5
+0475 8000            637         L4:SJMP VEHICLE_BETWEEN_4_5
+                     638             
+                     639     
+0477                 640     VEHICLE_BETWEEN_4_5:
+0477 D2A3            641         SETB LED4
+0479 D2A4            642         SETB LED5
+047B 800C            643         SJMP CONTINUE_5_6
+                     644     
+047D                 645     NO_VEHICLE_BETWEEN_4_5:
+047D 8532F0          646         MOV B,counter3
+0480 E533            647             MOV A,counter4
+0482 B5F002          648         CJNE A,B,CB34
+0485 C2A2            649             CLR LED3
+0487                 650             CB34:
+0487 C2A3            651             CLR LED4
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE    11
+
+                     652     
+0489                 653     CONTINUE_5_6:
+0489 8534F0          654         MOV B,counter5
+048C E535            655             MOV A,counter6
+048E B5F002          656         CJNE A,B,L5
+0491 8008            657             SJMP NO_VEHICLE_BETWEEN_5_6
+0493 8000            658         L5:SJMP VEHICLE_BETWEEN_5_6
+                     659             
+                     660     
+0495                 661     VEHICLE_BETWEEN_5_6:
+0495 D2A4            662         SETB LED5
+0497 D2A5            663         SETB LED6
+0499 800C            664         SJMP CONTINUE_6_7
+                     665     
+049B                 666     NO_VEHICLE_BETWEEN_5_6:
+049B 8532F0          667         MOV B,counter3
+049E E533            668             MOV A,counter4
+04A0 B5F002          669         CJNE A,B,CB45
+04A3 C2A3            670             CLR LED4
+04A5                 671             CB45:
+04A5 C2A4            672             CLR LED5
+                     673     
+                     674     
+04A7                 675     CONTINUE_6_7:
+04A7 8535F0          676         MOV B,counter6
+04AA E536            677             MOV A,counter7
+04AC B5F002          678         CJNE A,B,L6
+04AF 8008            679             SJMP NO_VEHICLE_BETWEEN_6_7
+04B1 8000            680         L6:sjmp VEHICLE_BETWEEN_6_7
+                     681             
+                     682             
+                     683     
+04B3                 684     VEHICLE_BETWEEN_6_7:
+04B3 D2A5            685         SETB LED6
+04B5 D2A6            686         SETB LED7
+04B7 800C            687         SJMP CONTINUE_7_8
+                     688     
+04B9                 689     NO_VEHICLE_BETWEEN_6_7:
+04B9 8533F0          690         MOV B,counter4
+04BC E534            691             MOV A,counter5
+04BE B5F002          692         CJNE A,B,CB56
+                     693             
+04C1 C2A4            694             CLR LED5
+04C3                 695             CB56:
+                     696             
+04C3 C2A5            697             CLR LED6
+                     698             
+                     699     
+04C5                 700     CONTINUE_7_8:
+04C5 8536F0          701         MOV B,counter7
+04C8 E537            702             MOV A,counter8
+04CA B5F002          703         CJNE A,B,L7
+04CD 8008            704             SJMP NO_VEHICLE_BETWEEN_7_8
+04CF 8000            705         L7:SJMP VEHICLE_BETWEEN_7_8
+                     706             
+                     707             
+                     708             
+                     709     
+04D1                 710     VEHICLE_BETWEEN_7_8:
+04D1 D2A6            711         SETB LED7
+04D3 D2A7            712         SETB LED8
+04D5 800C            713         SJMP CONTINUE_8
+                     714     
+04D7                 715     NO_VEHICLE_BETWEEN_7_8:
+04D7 8534F0          716         MOV B,counter5
+04DA E535            717             MOV A,counter6
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE    12
+
+04DC B5F002          718         CJNE A,B,CB67
+04DF C2A5            719             CLR LED6
+04E1                 720             CB67:
+                     721             
+04E1 C2A6            722             CLR LED7
+                     723             
+                     724     
+04E3                 725     CONTINUE_8:
+04E3 02001E          726         ljmp start
+04E6                 727             DELAY:
+                     728         
+04E6 7A32            729         MOV R2, #50      ; Load R2 with an initial value for 5 seconds delay
+04E8                 730     DELAY_5S:
+04E8 79FA            731         MOV R1, #250     ; Load R1 with a value for 1 second delay
+04EA                 732     DELAY_1S:
+04EA D9FE            733         DJNZ R1, DELAY_1S  ; Decrement R1 and loop if not zero
+04EC DAFA            734         DJNZ R2, DELAY_5S  ; Decrement R2 and loop if not zero
+04EE 22              735         RET               ; Return from the delay subroutine
+                     736     
+                     737     
+                     738     END
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE    13
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E                 T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . . . .  D ADDR   00F0H   A   
+CB12 . . . . . . . . .  C ADDR   0449H   A   
+CB23 . . . . . . . . .  C ADDR   0469H   A   
+CB34 . . . . . . . . .  C ADDR   0487H   A   
+CB45 . . . . . . . . .  C ADDR   04A5H   A   
+CB56 . . . . . . . . .  C ADDR   04C3H   A   
+CB67 . . . . . . . . .  C ADDR   04E1H   A   
+CONTINUE_1_2 . . . . .  C ADDR   0419H   A   
+CONTINUE_2_3 . . . . .  C ADDR   042DH   A   
+CONTINUE_3_4 . . . . .  C ADDR   044DH   A   
+CONTINUE_4_5 . . . . .  C ADDR   046BH   A   
+CONTINUE_5_6 . . . . .  C ADDR   0489H   A   
+CONTINUE_6_7 . . . . .  C ADDR   04A7H   A   
+CONTINUE_7_8 . . . . .  C ADDR   04C5H   A   
+CONTINUE_8 . . . . . .  C ADDR   04E3H   A   
+COUNTER1 . . . . . . .  N NUMB   0030H   A   
+COUNTER2 . . . . . . .  N NUMB   0031H   A   
+COUNTER3 . . . . . . .  N NUMB   0032H   A   
+COUNTER4 . . . . . . .  N NUMB   0033H   A   
+COUNTER5 . . . . . . .  N NUMB   0034H   A   
+COUNTER6 . . . . . . .  N NUMB   0035H   A   
+COUNTER7 . . . . . . .  N NUMB   0036H   A   
+COUNTER8 . . . . . . .  N NUMB   0037H   A   
+DELAY. . . . . . . . .  C ADDR   04E6H   A   
+DELAY_1S . . . . . . .  C ADDR   04EAH   A   
+DELAY_5S . . . . . . .  C ADDR   04E8H   A   
+IR1. . . . . . . . . .  B ADDR   0080H.0 A   
+IR1_PASSED . . . . . .  C ADDR   03F9H   A   
+IR2. . . . . . . . . .  B ADDR   0080H.1 A   
+IR2_PASSED . . . . . .  C ADDR   03FDH   A   
+IR3. . . . . . . . . .  B ADDR   0080H.2 A   
+IR3_PASSED . . . . . .  C ADDR   0401H   A   
+IR4. . . . . . . . . .  B ADDR   0080H.3 A   
+IR4_PASSED . . . . . .  C ADDR   0405H   A   
+IR5. . . . . . . . . .  B ADDR   0080H.4 A   
+IR5_PASSED . . . . . .  C ADDR   0409H   A   
+IR6. . . . . . . . . .  B ADDR   0080H.5 A   
+IR6_PASSED . . . . . .  C ADDR   040DH   A   
+IR7. . . . . . . . . .  B ADDR   0080H.6 A   
+IR7_PASSED . . . . . .  C ADDR   0411H   A   
+IR8. . . . . . . . . .  B ADDR   0080H.7 A   
+IR8_PASSED . . . . . .  C ADDR   0415H   A   
+IR_DONE. . . . . . . .  C ADDR   0417H   A   
+L1 . . . . . . . . . .  C ADDR   0423H   A   
+L2 . . . . . . . . . .  C ADDR   0437H   A   
+L3 . . . . . . . . . .  C ADDR   0457H   A   
+L4 . . . . . . . . . .  C ADDR   0475H   A   
+L5 . . . . . . . . . .  C ADDR   0493H   A   
+L6 . . . . . . . . . .  C ADDR   04B1H   A   
+L7 . . . . . . . . . .  C ADDR   04CFH   A   
+LED1 . . . . . . . . .  B ADDR   00A0H.0 A   
+LED2 . . . . . . . . .  B ADDR   00A0H.1 A   
+LED3 . . . . . . . . .  B ADDR   00A0H.2 A   
+LED4 . . . . . . . . .  B ADDR   00A0H.3 A   
+LED5 . . . . . . . . .  B ADDR   00A0H.4 A   
+LED6 . . . . . . . . .  B ADDR   00A0H.5 A   
+LED7 . . . . . . . . .  B ADDR   00A0H.6 A   
+LED8 . . . . . . . . .  B ADDR   00A0H.7 A   
+NO_VEHICLE_BETWEEN_1_2  C ADDR   042BH   A   
+NO_VEHICLE_BETWEEN_2_3  C ADDR   043FH   A   
+A51 MACRO ASSEMBLER  FF                                                                   05/03/2024 13:03:41 PAGE    14
+
+NO_VEHICLE_BETWEEN_3_4  C ADDR   045FH   A   
+NO_VEHICLE_BETWEEN_4_5  C ADDR   047DH   A   
+NO_VEHICLE_BETWEEN_5_6  C ADDR   049BH   A   
+NO_VEHICLE_BETWEEN_6_7  C ADDR   04B9H   A   
+NO_VEHICLE_BETWEEN_7_8  C ADDR   04D7H   A   
+P0 . . . . . . . . . .  D ADDR   0080H   A   
+P2 . . . . . . . . . .  D ADDR   00A0H   A   
+SET_INPUT. . . . . . .  C ADDR   0000H   A   
+START. . . . . . . . .  C ADDR   001EH   A   
+VEHICLE_BETWEEN_1_2. .  C ADDR   0425H   A   
+VEHICLE_BETWEEN_2_3. .  C ADDR   0439H   A   
+VEHICLE_BETWEEN_3_4. .  C ADDR   0459H   A   
+VEHICLE_BETWEEN_4_5. .  C ADDR   0477H   A   
+VEHICLE_BETWEEN_5_6. .  C ADDR   0495H   A   
+VEHICLE_BETWEEN_6_7. .  C ADDR   04B3H   A   
+VEHICLE_BETWEEN_7_8. .  C ADDR   04D1H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
